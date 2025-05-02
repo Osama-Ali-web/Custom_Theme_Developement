@@ -767,6 +767,14 @@ div.comment:first-of-type {
     }
 }
 
+.title{
+    font-family:var(--font-family-monospace);
+    font-weight: 700;
+    font-size: 64px !important;
+    lineheight: 72px !important;;
+
+}
+
 .autoBlur{
     animation: autoBlurAnimation linear both;
     animation-timeline: view();
@@ -783,3 +791,26 @@ div.comment:first-of-type {
         filter: blur(40px);
     }
 }
+
+
+.scroll-watcher{
+    height: 10px;
+    border: none;
+        border-radius: 22px;
+    position: fixed;
+    top:0;
+    z-index: 10000;
+    background: lime;
+    width:100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll( );
+}
+
+@keyframes scroll-watcher{
+    to{
+        scale: 1 1;
+    }
+}
+
